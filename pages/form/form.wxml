@@ -1,0 +1,34 @@
+<!--pages/form/form.wxml-->
+<view>
+  <view>{{title}}</view>
+  <view>{{description}}</view>
+</view>
+<view>
+  <form bindsubmit="formSubmit" >
+
+    <view>
+        <input placeholder="name" name="name"/>
+     </view>
+
+     <view>
+       <input placeholder="phone" name="phone"/>
+     </view>
+
+     <view>
+       <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}" name="city">
+        <view class="{{coloractive?'picker active':'picker'}}" >
+          {{region[0]}}，{{region[1]}}，{{region[2]}}
+        </view>
+        </picker>
+     </view>
+
+      <view>
+        <input placeholder="msg" name="address"/>
+      </view>
+
+      <view>
+         <button form-type="submit">Submit</button>
+      </view>
+  </form>
+</view>
+<view><navigator url="/pages/webview/webview" open-type="redirect">youzan</navigator></view>

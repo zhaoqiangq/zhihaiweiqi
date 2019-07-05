@@ -1,0 +1,11 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="section">
+     <input placeholder="这是一个可以自动聚焦的input" bindinput="bindKeyInput" bindconfirm="bindSearch" auto-focus/>
+  </view>
+  <button bindtap="setSearch">点击设置以上按钮plain属性</button>
+
+<navigator url="/pages/orderlist/orderlist" pen-type="navigate" >
+  <view>1111</view>
+</navigator>
+</view>

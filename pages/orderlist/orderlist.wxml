@@ -1,0 +1,14 @@
+<!--pages/orderlist/orderlist.wxml-->
+<view wx:if="{{isnull}}" class="null">您目前还没有订单</view>
+<view class="order" wx:if="{{!isnull}}">
+    <view class="order-item" wx:for="{{datalist}}" wx:key="index">
+      <view>{{item.name}}</view>
+      <view>{{item.phone}}</view>
+      <view>{{item.province}}</view>
+      <view>{{item.city}}</view>
+      <view>{{item.area}}</view>
+      <view>{{item.address}}</view>
+      <view>{{item.created_at}}</view>
+    </view>
+</view>
+<view class="more" wx:if="{{ismore}}">已经到底了</view>

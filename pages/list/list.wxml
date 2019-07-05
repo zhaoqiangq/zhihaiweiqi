@@ -1,0 +1,14 @@
+<!--pages/orderlist/orderlist.wxml-->
+<view wx:if="{{isnull}}" class="null">您目前还没有订单</view>
+<view class="order" wx:if="{{!isnull}}">
+    <view class="order-item" wx:for="{{datalist}}" wx:key="index">
+      <navigator url="/pages/form/form?title={{item.title}}&description={{item.description}}&code={{code}}&goods_id={{item.id}}" open-type="redirect"
+    >
+      <view>{{item.title}}</view>
+      <view>{{item.created_at}}</view>
+      <view>{{item.description}}</view>
+      <image src='{{item.cover}}' mode="widthFix"></image>
+      </navigator>
+    </view>
+</view>
+<view class="more" wx:if="{{ismore}}">已经到底了</view>
