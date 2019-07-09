@@ -1,1 +1,179 @@
 /* pages/form/form.wxss */
+page{
+  height: 100%;
+  background: #F3F3F3;
+}
+.formbox{
+  padding-top: 64rpx;
+  position: relative;
+}
+.formbox::after{
+  content: "";
+  width: 100%;
+  height: 172rpx;
+  background: #19317B;
+  position: absolute;
+  top: 0;left: 0;
+  z-index: -1;
+}
+.form{
+  width: 670rpx;
+  margin: 0 auto;
+  padding: 40rpx 40rpx 20rpx 40rpx;
+  box-sizing: border-box;
+  background: #fff;
+  box-shadow: 0 2px 18px 0 rgba(224,224,224,0.50);
+  border-radius: 20rpx;
+}
+.section{
+  border: 1rpx solid #979797;
+  border-radius: 5rpx;
+  height: 90rpx;
+  margin-bottom: 30rpx;
+  box-sizing: border-box;
+  margin-left: 1rpx;
+}
+.section .img{
+  width: 90rpx;
+  position: relative;
+  height: 100%;
+  display: inline-block;
+}
+.section .img image{
+  width: 38rpx;
+  position: absolute;
+  top:0;bottom: 0;right: 0;left: 0;
+  margin: auto;
+
+}
+.section .img::after{
+  content: "";
+  width: 2rpx;
+  height: 32rpx;
+  background: #979797;
+  position: absolute;
+  top:0;bottom: 0;right: 0;
+  margin: auto;
+}
+.section.active input{
+  width: 490rpx;
+  height: 100%;
+  float: right;
+  padding-left: 20rpx;
+  box-sizing: border-box;
+  font-size: 30rpx;
+  color: #333;
+}
+.section input{
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  padding-left: 30rpx;
+  box-sizing: border-box;
+  font-size: 30rpx;
+  color: #333;
+}
+.picker{
+  font-size: 30rpx;
+  color: #818181;
+  padding-left: 30rpx;
+  box-sizing: border-box;
+  height: 100%;
+  line-height: 90rpx;
+}
+.picker.active{
+  color: #333;
+}
+.but{
+  width: 597rpx;
+  height: 146rpx;
+  background: url('http://www.zhaoxiaoqiang.com/images/seafood/orderback.png')no-repeat;
+  background-size: cover;
+  border: none;
+  text-align: center;
+  line-height: 126rpx;
+  font-size: 30rpx;
+  color: #fff;
+  position: relative;
+}
+.but button{
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  position: absolute;
+  left: 0;top: 0;
+}
+.webview image{
+  width: 676rpx;
+  display: block;
+  margin: 0 auto;
+  margin-top: 50rpx;
+}
+
+.shadowbox{
+  position: fixed;
+  top:0;left: 0;right: 0;bottom: 0;
+  margin: auto;
+  background: rgba(0,0,0,0.7);
+  z-index: 8;
+}
+.shadowbox .shadow{
+  position: absolute;
+  top:0;left: 0;right: 0;bottom: 0;
+  margin: auto;
+  background: #fff;
+  border-radius: 20rpx;
+  width: 600rpx;
+  height: 480rpx;
+  padding-top: 33rpx;
+}
+.shadowbox .shadow .close{
+  position: absolute;
+  top:21rpx;right: 21rpx;
+  width: 47rpx;height: 47rpx;
+}
+.shadowbox .shadow .close image{
+  width: 100%;
+}
+.shadowbox .shadow text{
+  font-size: 36rpx;
+  color: #333333;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+  margin-top:50rpx; 
+}
+.infobox{
+  font-size: 28rpx;
+  color: #666666;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+  margin-top: 50rpx;
+}
+.infobox .info{
+  margin-top: 20rpx;
+}
+.buts{
+  width: 100%;
+  height: 80rpx;
+  margin-top: 60rpx;
+}
+.buts .itembuts{
+  width: 200rpx;
+  height: 80rpx;
+  background: #172E7D;
+  margin-left: 40rpx;
+  border-radius: 10rpx;
+  text-align: center;
+  line-height: 80rpx;
+  color: #fff;
+  font-size: 28rpx;
+  float: left
+}
+.buts .itembuts.active{
+   background: #fff;
+   border: 2rpx solid #889ee4;
+   color: #889ee4;
+   font-weight: 600;
+   opacity: 1;
+}

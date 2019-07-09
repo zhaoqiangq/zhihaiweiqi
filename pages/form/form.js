@@ -10,8 +10,11 @@ Page({
       description:'',
       code:'',
       goods_id:'',
-      region: ['请输入省', '市', '区'],
-      coloractive:false
+      region: ['请选择省', '市', '区'],
+      coloractive:false ,
+      corlordate:false,
+      date: '请选择发货时间',
+      isshadow: false
   },
 
   /**
@@ -31,9 +34,19 @@ Page({
       coloractive:true
     })
   },
+  bindDateChange: function (e) {
+    this.setData({
+      date: e.detail.value,
+      colordate: true
+    })
+  },
+  closeshadowbut: function () {
+    this.setData({
+      isshadow: false
+    })
+  },
   formSubmit: function (e) {
     var that = this;
-    console.log('form发生了submit事件，携带数据为：', e.detail.value)
     if (e.detail.value.name==''){
       wx.showToast({
         title: '请输入姓名',
@@ -45,6 +58,14 @@ Page({
     if (e.detail.value.phone == '') {
       wx.showToast({
         title: '请输入手机号码',
+        icon: 'none',
+        duration: 2000
+      })
+      return false;
+    }
+    if (!that.data.colordate) {
+      wx.showToast({
+        title: '请选择发货时间',
         icon: 'none',
         duration: 2000
       })
@@ -78,17 +99,16 @@ Page({
         province: e.detail.value.city[0],
         city: e.detail.value.city[1],
         area: e.detail.value.city[2],
-        address: e.detail.value.address
+        address: e.detail.value.address,
+        send_time: e.detail.value.date
       },
       header: {
         'content-type': 'application/x-www-form-urlencoded' // 默认值
       },
       success(res) {
         if (res.data.status==1){
-          wx.showToast({
-            title: '提交成功',
-            icon: 'none',
-            duration: 2000
+          that.setData({
+            isshadow: true
           })
         }else{
           wx.showToast({

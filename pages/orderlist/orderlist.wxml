@@ -1,14 +1,20 @@
 <!--pages/orderlist/orderlist.wxml-->
-<view wx:if="{{isnull}}" class="null">您目前还没有订单</view>
-<view class="order" wx:if="{{!isnull}}">
+<view wx:if="{{isnull}}" class="null">
+  <image src='../../img/ordernull.png' mode="widthFix"></image>
+  <text>暂无订单记录哦～</text>
+</view>
+<view class="orderbox" wx:if="{{!isnull}}">
+<view class="order">
     <view class="order-item" wx:for="{{datalist}}" wx:key="index">
-      <view>{{item.name}}</view>
-      <view>{{item.phone}}</view>
-      <view>{{item.province}}</view>
-      <view>{{item.city}}</view>
-      <view>{{item.area}}</view>
-      <view>{{item.address}}</view>
-      <view>{{item.created_at}}</view>
+      <view class="imgs">
+        <image src='http://www.zhaoxiaoqiang.com{{item.cover}}' mode="widthFix"></image>
+      </view>
+      <view class="msg">
+          <view class="h6">{{item.title}}兑换成功</view>
+          <view class="info">您于{{item.send_time}}兑换成功，将在3个工作日抵达</view>
+      </view>
+      <view class="clear"></view>
     </view>
 </view>
 <view class="more" wx:if="{{ismore}}">已经到底了</view>
+</view>

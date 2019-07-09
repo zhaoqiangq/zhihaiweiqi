@@ -2,8 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/list/list",
-    "pages/orderlist/orderlist",
     "pages/form/form",
+    "pages/orderlist/orderlist",
     "pages/webview/webview"
   ],
   "window": {

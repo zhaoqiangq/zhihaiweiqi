@@ -1,7 +1,6 @@
 // pages/orderlist/orderlist.js
 const app = getApp()
 Page({
-
   /**
    * 页面的初始数据
    */
@@ -23,7 +22,6 @@ Page({
         page: that.data.page
       },
       success(res) {
-        console.log(res);
         if (res.data.data.data.length == 0) {
           that.setData({
             isnull: true

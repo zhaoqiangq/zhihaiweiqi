@@ -1,11 +1,42 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="section">
-     <input placeholder="这是一个可以自动聚焦的input" bindinput="bindKeyInput" bindconfirm="bindSearch" auto-focus/>
+  
+  <view class="header">
+    <view bindtap="isshadowbut">兑换规则</view>
   </view>
-  <button bindtap="setSearch">点击设置以上按钮plain属性</button>
 
-<navigator url="/pages/orderlist/orderlist" pen-type="navigate" >
-  <view>1111</view>
-</navigator>
+  <view class="shadowbox" wx:if="{{isshadow}}">
+    <view class="shadow">
+       <view class="close" bindtap="closeshadowbut">
+         <image src='../../img/close.png' mode="widthFix"></image>
+       </view>
+       <text>兑换规则</text>
+       <view class="infobox">
+        <view class="info">
+         1. 亲爱的会员们, 感恩你的一路陪伴,你每一次的消费都会有新的积分累积。现在,你的积分将可以在我们这里换取相应的礼品!礼品已经准备好了
+       </view>
+        <view class="info">
+         2. 亲爱的会员们, 感恩你的一路陪伴,你每一次的消费都会有新的积分累积。现在,你的积分将可以在我们这里换取相应的礼品!礼品已经准备好了
+       </view>
+       <view class="info">
+         3. 亲爱的会员们, 感恩你的一路陪伴,你每一次的消费都会有新的积分累积。现在,你的积分将可以在我们这里换取相应的礼品!礼品已经准备好了
+       </view>
+       </view>
+    </view>
+  </view>
+
+
+  
+  <view class="section">
+    <view class="sectiontop">输入您的兑换码</view>
+    <view class="inputbox">
+     <input placeholder="" bindinput="bindKeyInput" bindconfirm="bindSearch" auto-focus/>
+    </view>
+  </view>
+
+  <button class="searchbut" bindtap="setSearch">立即兑换</button>
+
+  <navigator url="/pages/orderlist/orderlist" pen-type="navigate" >
+    <view class="toorder">兑换记录</view>
+  </navigator>
 </view>

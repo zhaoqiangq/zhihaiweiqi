@@ -1,1 +1,104 @@
 /* pages/list/list.wxss */
+page{
+  height: 100%;
+  background: #F3F3F3;
+}
+.null{
+  position: fixed;
+  top:300rpx;left: 0;right: 0;
+  margin: auto;
+  width: 100%;
+  height: 300rpx;
+  text-align: center;
+  font-size: 30rpx;
+  color: #333333;
+}
+.null image{
+  width: 173rpx;
+  margin: 0 auto;
+  margin-bottom: 30rpx;
+  display: block;
+
+}
+.orderbox{
+  padding-top: 154rpx;
+  position: relative;
+}
+.orderbox::after{
+  content: "";
+  width: 100%;
+  height: 172rpx;
+  background: #19317B;
+  position: absolute;
+  top: 0;left: 0;
+  z-index: -1;
+}
+.order{
+  padding: 0 35rpx;
+  box-sizing: border-box;
+}
+.order-item{
+  width: 100%;
+  background:url('http://www.zhaoxiaoqiang.com/images/seafood/item02.png') center top no-repeat ,
+url('http://www.zhaoxiaoqiang.com/images/seafood/item01.png') center bottom no-repeat;
+  background-size: 100% 17rpx;
+  padding: 16rpx 0 8rpx 0;
+  box-sizing: border-box;
+  margin-bottom: 26rpx;
+  border-radius: 5rpx;
+}
+.order-item .item-inner{
+  background: #fff;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  position: relative;
+}
+.order-item .item-inner .img{
+  width: 165rpx;
+  float: left;
+  margin-right: 40rpx;
+}
+.order-item .item-inner .img image{
+  width: 100%;
+}
+.msg{
+  float: left;
+  width: 300rpx;
+}
+.msg .h6{
+  font-size: 30rpx;
+  color: #333333;
+  margin-top: 10rpx;
+}
+.msg .info{
+  margin-top: 20rpx;
+  font-size: 24rpx;
+  color: #999999;
+}
+.but{
+  width: 80rpx;
+  height: 150rpx;
+  background: #19317B;
+  border-radius: 12rpx;
+  position: absolute;
+  top:0;right: 30rpx;bottom: 0;
+  margin: auto;
+  color: #FFFFFF;
+  text-align: center;
+  padding-top: 23rpx;
+  box-sizing: border-box;
+}
+.but text{
+  writing-mode:tb-rl;
+  font-size: 28rpx;
+
+}
+.clear{
+  clear: both;
+}
+.more{
+  line-height: 60rpx;
+  text-align: center;
+  color: #333;
+  font-size: 25rpx;
+}

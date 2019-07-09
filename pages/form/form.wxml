@@ -1,20 +1,33 @@
 <!--pages/form/form.wxml-->
-<view>
-  <view>{{title}}</view>
-  <view>{{description}}</view>
-</view>
-<view>
+<view class="formbox">
+
+<view class="form">
   <form bindsubmit="formSubmit" >
 
-    <view>
-        <input placeholder="name" name="name"/>
+    <view class="section active">
+        <view class="img">
+           <image src='../../img/name.png' mode="widthFix"></image>
+        </view>
+        <input placeholder="请输入姓名" name="name"/>
      </view>
 
-     <view>
-       <input placeholder="phone" name="phone"/>
+     <view class="section active">
+        <view class="img">
+           <image src='../../img/phone.png' mode="widthFix" style='width:33rpx;'></image>
+        </view>
+       <input placeholder="请输入手机号" name="phone"/>
      </view>
 
-     <view>
+
+<view class="section">
+  <picker mode="date" value="{{date}}" name="date" bindchange="bindDateChange">
+    <view class="{{colordate?'picker active':'picker'}}">
+      {{date}}
+    </view>
+  </picker>
+</view>
+
+     <view class="section">
        <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}" name="city">
         <view class="{{coloractive?'picker active':'picker'}}" >
           {{region[0]}}，{{region[1]}}，{{region[2]}}
@@ -22,13 +35,41 @@
         </picker>
      </view>
 
-      <view>
-        <input placeholder="msg" name="address"/>
+      <view class="section">
+        <input placeholder="详细地址：门牌号、小区、单元格" name="address"/>
       </view>
 
-      <view>
-         <button form-type="submit">Submit</button>
+      <view class="but">
+       <button form-type="submit">Submit</button>
+        确认提交
       </view>
   </form>
 </view>
-<view><navigator url="/pages/webview/webview" open-type="redirect">youzan</navigator></view>
+<view class="webview"><navigator url="/pages/webview/webview" pen-type="navigate">
+    <image src='http://www.zhaoxiaoqiang.com/images/seafood/advertising.png' mode="widthFix"></image>
+</navigator></view>
+</view>
+
+  <view class="shadowbox" wx:if="{{isshadow}}">
+    <view class="shadow">
+       <view class="close" bindtap="closeshadowbut">
+         <image src='../../img/close.png' mode="widthFix"></image>
+       </view>
+       <text>兑换成功</text>
+       <view class="infobox">
+        <view class="info" style='line-height: 50rpx;'>
+          兑换码{{code}}兑换成功，兑换礼盒{{title}},将在{{date}}发货,预计3个工作日可以抵达
+       </view>
+
+       <view class="buts">
+         <navigator url="/pages/index/index" pen-type="redirect" >
+        <view class="itembuts active">继续兑换</view>
+      </navigator>
+      
+<navigator url="/pages/webview/webview" pen-type="redirect" >
+       <view class="itembuts">继续选购</view>
+  </navigator>
+       </view>
+       </view>
+    </view>
+  </view>
