@@ -5,17 +5,17 @@
   <form bindsubmit="formSubmit" >
 
     <view class="section active">
+        <input placeholder="请输入姓名" name="name"/>
         <view class="img">
            <image src='../../img/name.png' mode="widthFix"></image>
         </view>
-        <input placeholder="请输入姓名" name="name"/>
      </view>
 
      <view class="section active">
+       <input placeholder="请输入手机号" name="phone"/>
         <view class="img">
            <image src='../../img/phone.png' mode="widthFix" style='width:33rpx;'></image>
         </view>
-       <input placeholder="请输入手机号" name="phone"/>
      </view>
 
 
@@ -46,7 +46,7 @@
   </form>
 </view>
 <view class="webview"><navigator url="/pages/webview/webview" pen-type="navigate">
-    <image src='http://www.zhaoxiaoqiang.com/images/seafood/advertising.png' mode="widthFix"></image>
+    <image src='http://www.zhaoxiaoqiang.com/images/seafood/webdd.jpg' mode="widthFix"></image>
 </navigator></view>
 </view>
 

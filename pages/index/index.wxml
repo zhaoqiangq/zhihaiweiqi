@@ -12,20 +12,20 @@
        </view>
        <text>兑换规则</text>
        <view class="infobox">
-        <view class="info">
-         1. 亲爱的会员们, 感恩你的一路陪伴,你每一次的消费都会有新的积分累积。现在,你的积分将可以在我们这里换取相应的礼品!礼品已经准备好了
-       </view>
-        <view class="info">
-         2. 亲爱的会员们, 感恩你的一路陪伴,你每一次的消费都会有新的积分累积。现在,你的积分将可以在我们这里换取相应的礼品!礼品已经准备好了
-       </view>
-       <view class="info">
-         3. 亲爱的会员们, 感恩你的一路陪伴,你每一次的消费都会有新的积分累积。现在,你的积分将可以在我们这里换取相应的礼品!礼品已经准备好了
-       </view>
-       </view>
+        <view class="info">你终于来啦~ 我在永恒之海等你好久啦~!  </view>
+        <view class="info"> 现在就来带我回家吧~! </view>
+        <view class="info">第1步 输入”ForeverSea指海为期”兑换券上的兑换码</view>
+        <view class="info">第2步 打开相应的”指海为期”海鲜礼盒了</view>
+        <view class="info">第3步 填写相关收货信息,确认提交</view>
+        <view class="info">第4步 坐等指为你严选真诚的美味到家!</view>
+        <view class="info">每个卡券兑换码只可兑换一次,确认提交完成即失效 查看已兑礼物请点击”兑换记录”</view>
+      </view>
     </view>
   </view>
 
-
+  <view class="title">
+    <image src='../../img/title.png' mode="widthFix"></image>
+  </view>
   
   <view class="section">
     <view class="sectiontop">输入您的兑换码</view>

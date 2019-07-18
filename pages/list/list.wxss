@@ -1,7 +1,8 @@
 /* pages/list/list.wxss */
 page{
   height: 100%;
-  background: #F3F3F3;
+  background: #F3F3F3 url('http://www.zhaoxiaoqiang.com/images/seafood/webaa.jpg')no-repeat;
+  background-size: 100%;
 }
 .null{
   position: fixed;
@@ -21,7 +22,7 @@ page{
 
 }
 .orderbox{
-  padding-top: 154rpx;
+  padding-top: 34rpx;
   position: relative;
 }
 .orderbox::after{
@@ -32,6 +33,7 @@ page{
   position: absolute;
   top: 0;left: 0;
   z-index: -1;
+  display: none;
 }
 .order{
   padding: 0 35rpx;
@@ -42,7 +44,7 @@ page{
   background:url('http://www.zhaoxiaoqiang.com/images/seafood/item02.png') center top no-repeat ,
 url('http://www.zhaoxiaoqiang.com/images/seafood/item01.png') center bottom no-repeat;
   background-size: 100% 17rpx;
-  padding: 16rpx 0 8rpx 0;
+  padding: 15rpx 0 8rpx 0;
   box-sizing: border-box;
   margin-bottom: 26rpx;
   border-radius: 5rpx;
@@ -56,6 +58,7 @@ url('http://www.zhaoxiaoqiang.com/images/seafood/item01.png') center bottom no-r
 .order-item .item-inner .img{
   width: 165rpx;
   float: left;
+  height: 100%;
   margin-right: 40rpx;
 }
 .order-item .item-inner .img image{
@@ -68,10 +71,10 @@ url('http://www.zhaoxiaoqiang.com/images/seafood/item01.png') center bottom no-r
 .msg .h6{
   font-size: 30rpx;
   color: #333333;
-  margin-top: 10rpx;
+  margin-top: 8rpx;
 }
 .msg .info{
-  margin-top: 20rpx;
+  margin-top: 8rpx;
   font-size: 24rpx;
   color: #999999;
 }

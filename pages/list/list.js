@@ -24,7 +24,8 @@ Page({
     wx.request({
       url: 'https://www.zhaoxiaoqiang.com/active/goods?openid=' + app.openid + '',
       data: {
-        page: that.data.page
+        page: that.data.page,
+        code: that.data.code
       },
       success(res) {
         if (res.data.data.data.length == 0) {
@@ -52,7 +53,8 @@ Page({
     wx.request({
       url: 'https://www.zhaoxiaoqiang.com/active/goods?openid=' + app.openid + '',
       data: {
-        page: that.data.page
+        page: that.data.page,
+        code: that.data.code
       },
       success(res) {
         if (res.data.data.data.length == 0) {
