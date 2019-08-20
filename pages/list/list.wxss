@@ -90,6 +90,16 @@ url('http://www.zhaoxiaoqiang.com/images/seafood/item01.png') center bottom no-r
   text-align: center;
   padding-top: 23rpx;
   box-sizing: border-box;
+  opacity: 0.5;
+}
+.but.active{
+  opacity: 1;
+}
+.but navigator{
+  position: absolute;
+  top:0;left: 0;
+  width: 80rpx;height: 150rpx;
+  margin: auto;
 }
 .but text{
   writing-mode:tb-rl;
@@ -104,4 +114,40 @@ url('http://www.zhaoxiaoqiang.com/images/seafood/item01.png') center bottom no-r
   text-align: center;
   color: #333;
   font-size: 25rpx;
+}
+
+.showimg{
+  position: fixed;
+  top:0;left: 0;right: 0;bottom: 0;
+  margin: auto;
+  z-index: 99;
+}
+.showimg .showimgshadow{
+  position: absolute;
+  top:0;left: 0;right: 0;bottom: 0;
+  margin: auto;
+  background: rgba(0,0,0,0.7);
+}
+.showimg .showimginner{
+  background: #fff;
+  position: absolute;
+  top:150rpx;left: 50rpx;right: 50rpx;bottom: 150rpx;
+  margin: auto;
+  border-radius: 10rpx;
+  padding: 20rpx 50rpx;
+  box-sizing: border-box;
+  overflow: auto;
+}
+.showimgclose{
+  position: absolute;
+  top:15rpx;right: 15rpx;
+  margin: auto;
+  width: 42rpx;
+  height: 43rpx;
+}
+.showimgclose image{
+  width: 100%;
+}
+.showimg .showimginner image{
+  width: 100%;
 }

@@ -10,9 +10,22 @@ Page({
     isnull: false,
     page: 1,
     ismore: false,
-    code:''
+    code:'',
+    isshowimg:false,
+    imglist:[],
+    max_day:''
   },
-
+  tabshowimg:function(e){
+    this.setData({
+      isshowimg:true,
+      imglist: this.data.datalist[e.currentTarget.dataset.index].images
+    })
+  },
+  rmshowimg:function(){
+    this.setData({
+      isshowimg: false
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -35,10 +48,16 @@ Page({
           return;
         }
         that.setData({
-          datalist: res.data.data.data
+          datalist: res.data.data.data,
+          max_day: res.data.data.max_day
         })
 
       }
+    })
+  },
+  onShow:function(){
+    this.setData({
+      isshowimg: false
     })
   },
 

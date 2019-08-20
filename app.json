@@ -1,9 +1,15 @@
 {
+  "plugins": {
+    "calendar": {
+      "version": "1.1.3",
+      "provider": "wx92c68dae5a8bb046"
+    }
+  },
   "pages": [
     "pages/indexs/indexs",
     "pages/index/index",
-    "pages/list/list",
     "pages/form/form",
+    "pages/list/list",
     "pages/orderlist/orderlist",
     "pages/webview/webview"
   ],
@@ -13,5 +19,8 @@
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
   },
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "navigateToMiniProgramAppIdList": [
+    "wx8ca8e8798925b4f1"
+  ]
 }

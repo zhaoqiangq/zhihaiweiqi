@@ -5,15 +5,17 @@ Page({
    * 页面的初始数据
    */
   data: {
-    imgUrls: [
-      'http://www.zhaoxiaoqiang.com/images/seafood/banner001.png',
-      'http://www.zhaoxiaoqiang.com/images/seafood/banner003.png',
-      'http://www.zhaoxiaoqiang.com/images/seafood/banner002.png'
-    ],
+    imgUrls: [],
+    bottomulr:[],
     indicatorDots: true,
     autoplay: true,
     interval: 5000,
     duration: 1000
+  },
+  toaccounts:function(e){
+    wx.navigateTo({
+      url: '/pages/webview/webview?url=' + e.currentTarget.dataset.url,
+    })
   },
   onShareAppMessage: function (res) {
     if (res.from === 'button') {
@@ -25,12 +27,30 @@ Page({
       path: '/page/indexs/indexs'
     }
   },
+  toyouzan:function(){
+    wx.navigateToMiniProgram({
+      appId: 'wx8ca8e8798925b4f1', // 要跳转的小程序的appid
+      success(res) {
+        // 打开成功  
+        console.log(res);
+      }
+    }) 
+  },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var that = this;
+    wx.request({
+      url: 'https://www.zhaoxiaoqiang.com/site/ad',
+      success(res) {
+        that.setData({
+          imgUrls: res.data.data['index-banner'],
+          bottomulr: res.data.data['index-bottom']
+        })
+      }
+    })
   },
 
   /**

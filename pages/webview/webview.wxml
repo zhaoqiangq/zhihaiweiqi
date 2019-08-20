@@ -1,2 +1,2 @@
 <!--pages/webview/webview.wxml-->
-<web-view src='https://www.zhaoxiaoqiang.com/youzan.html'></web-view>
+<web-view src='{{url}}'></web-view>

@@ -19,12 +19,10 @@
      </view>
 
 
-<view class="section">
-  <picker mode="date" value="{{date}}" name="date" bindchange="bindDateChange">
+<view class="section" bindtap='bindDateChange'>
     <view class="{{colordate?'picker active':'picker'}}">
       {{date}}
     </view>
-  </picker>
 </view>
 
      <view class="section">
@@ -45,9 +43,11 @@
       </view>
   </form>
 </view>
-<view class="webview"><navigator url="/pages/webview/webview" pen-type="navigate">
+<view class="webview" bindtap="toyouzan">
+<!-- <navigator url="/pages/webview/webview" pen-type="navigate">  -->
     <image src='http://www.zhaoxiaoqiang.com/images/seafood/webdd.jpg' mode="widthFix"></image>
-</navigator></view>
+<!-- </navigator> -->
+</view>
 </view>
 
   <view class="shadowbox" wx:if="{{isshadow}}">
@@ -73,3 +73,11 @@
        </view>
     </view>
   </view>
+
+<view class="timeshadowbox" wx:if="{{istime}}">
+  <view class="timeshadow" bindtap='rmistime'></view>
+  <view class="timedata">
+   <calendar start-date="{{startdate}}" weeks-type="cn" end-date="{{enddate}}" days-color="{{daysclor}}" binddayClick="dayClick" bindnextMonth="next" bindprevMonth="prev" calendar-style="calendar" board-style="board" />
+  </view>
+</view>
+

@@ -19,7 +19,7 @@ App({
               code: res.code
             },
             success(res) {
-              that.openid = res.data.data.openid
+              that.openid = res.data.data.openid;
             }
           })
         } else {

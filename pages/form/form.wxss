@@ -179,3 +179,33 @@ page{
    font-weight: 600;
    opacity: 1;
 }
+
+
+.timeshadowbox{
+  position: fixed;
+  top: 0;left: 0;right: 0;bottom: 0;
+  margin: auto;
+  z-index: 999;
+}
+.timeshadow{
+  position: absolute;
+  top: 0;left: 0;right: 0;bottom: 0;
+  margin: auto;
+  background: rgba(0,0,0,0.7);
+}
+.timedata{
+  position: absolute;
+  top:200rpx;left: 0;right: 0;
+  margin: auto;
+  padding-left: 50rpx;
+  box-sizing: border-box;
+  z-index: 999;
+}
+.calendar{
+  width: 650rpx;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 16rpx;
+  padding-top: 80rpx;
+  padding-bottom: 50rpx;
+}

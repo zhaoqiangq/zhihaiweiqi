@@ -6,9 +6,7 @@
 
 <view class="orderbox">
   <view class="order" wx:if="{{!isnull}}">
-    <view class="order-item" wx:for="{{datalist}}" wx:key="index">
-      <navigator url="/pages/form/form?title={{item.title}}&description={{item.description}}&code={{code}}&goods_id={{item.id}}" open-type="navigate"
-    >
+    <view class="order-item" wx:for="{{datalist}}" wx:key="{{index}}" data-index="{{index}}" bindtap='tabshowimg'>
       <view class="item-inner">
          <view class="img">
           <image src='{{item.cover}}' mode="widthFix"></image> 
@@ -17,15 +15,27 @@
            <view class="h6">{{item.title}}</view>
            <view class="info">{{item.description}}</view>
         </view>
-        <view class="but">
+        <view class="but {{item.status==1&&item.show==1?'active':''}}">
            <text>  立 即 开</text>
+           <navigator wx:if="{{item.status==1&&item.show==1}}" url="/pages/form/form?title={{item.title}}&description={{item.description}}&code={{code}}&goods_id={{item.id}}&startdates={{item.can_sell_at}}&max_day={{max_day}}&cant_send={{item.cant_send}}" open-type="navigate"
+    > </navigator>
         </view>
         <view class="clear"></view>
       </view>
-      </navigator>
+     
     </view>
   </view>
   
   <view class="more" wx:if="{{ismore}}">已经到底了</view>
 </view>
 
+
+<view class="showimg" wx:if="{{isshowimg}}">
+  <view class="showimgshadow" bindtap='rmshowimg'></view>
+  <view class="showimginner">
+    <view class="showimgclose" bindtap='rmshowimg'>
+        <image src='../../img/close.png'  mode="widthFix" ></image>
+    </view>
+    <image src='{{items}}'  mode="widthFix" wx:for="{{imglist}}" wx:key="{{index}}" wx:for-item="items"></image>
+  </view>
+</view>

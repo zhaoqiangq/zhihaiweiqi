@@ -22,21 +22,23 @@ swiper-item image{
   margin: 0 auto;
   position: relative;
 }
-.nav navigator{
-  width: 33%;
+.nav .navigator{
+  width: 25%;
   display: inline-block;
   height: 100%;
+  position: relative;
 }
-.nav navigator view{
+.nav .navigator view{
   font-size: 25rpx;
   color: #333;
   text-align: center;
   padding-top: 30rpx;
   box-sizing: border-box;
 }
-.nav navigator view image{
+.nav .navigator view image{
   margin: 0 auto;
   width: 70rpx;
   display: block;
   margin-bottom: 10rpx;
 }
+
