@@ -7,8 +7,8 @@
   },
   "pages": [
     "pages/indexs/indexs",
-    "pages/index/index",
     "pages/form/form",
+    "pages/index/index",
     "pages/list/list",
     "pages/orderlist/orderlist",
     "pages/webview/webview"

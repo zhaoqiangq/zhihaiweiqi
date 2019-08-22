@@ -23,7 +23,15 @@ Page({
       daysclor:[],
       cant_send:[]
   },
-
+  toyouzan: function () {
+    wx.navigateToMiniProgram({
+      appId: 'wx8ca8e8798925b4f1', // 要跳转的小程序的appid
+      success(res) {
+        // 打开成功  
+        console.log(res);
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -176,7 +184,7 @@ Page({
   bindRegionChange:function(e){
     if (e.detail.value[0] == '内蒙古自治区' || e.detail.value[0] == '广西壮族自治区' || e.detail.value[0] == '海南省' || e.detail.value[0] == '贵州省' || e.detail.value[0] == '云南省' || e.detail.value[0] == '西藏自治区' || e.detail.value[0] == '甘肃省' || e.detail.value[0] == '青海省' || e.detail.value[0] == '宁夏回族自治区' || e.detail.value[0] == '新疆维吾尔自治区' || e.detail.value[0] == '台湾省' || e.detail.value[0] == '香港特别行政区' || e.detail.value[0] == '澳门特别行政区'){
       wx.showToast({
-        title: '此地区还未开放海鲜物流体系，尽情期待',
+        title: '此地区还未开放海鲜物流,请联系客服期柒',
         icon: 'none',
         duration: 2000
       })

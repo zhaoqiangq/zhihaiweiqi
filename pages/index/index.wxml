@@ -2,7 +2,7 @@
 <view class="container">
   
   <view class="header">
-    <view bindtap="isshadowbut">兑换规则</view>
+    <view bindtap="isshadowbut">兑换细则</view>
   </view>
 
   <view class="shadowbox" wx:if="{{isshadow}}">

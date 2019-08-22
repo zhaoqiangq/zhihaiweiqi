@@ -15,9 +15,9 @@
            <view class="h6">{{item.title}}</view>
            <view class="info">{{item.description}}</view>
         </view>
-        <view class="but {{item.status==1&&item.show==1?'active':''}}">
-           <text>  立 即 开</text>
-           <navigator wx:if="{{item.status==1&&item.show==1}}" url="/pages/form/form?title={{item.title}}&description={{item.description}}&code={{code}}&goods_id={{item.id}}&startdates={{item.can_sell_at}}&max_day={{max_day}}&cant_send={{item.cant_send}}" open-type="navigate"
+        <view class="but {{item.can_sell==1&&item.status==1&&item.show==1?'active':''}}">
+           <text>带我回家</text>
+           <navigator wx:if="{{item.can_sell==item.status==1&&item.show==1}}" url="/pages/form/form?title={{item.title}}&description={{item.description}}&code={{code}}&goods_id={{item.id}}&startdates={{item.can_sell_at}}&max_day={{max_day}}&cant_send={{item.cant_send}}" open-type="navigate"
     > </navigator>
         </view>
         <view class="clear"></view>

@@ -43,7 +43,8 @@
       </view>
   </form>
 </view>
-<view class="webview" bindtap="toyouzan">
+<!-- <view class="webview" bindtap="toyouzan"> -->
+<view class="webview"> 
 <!-- <navigator url="/pages/webview/webview" pen-type="navigate">  -->
     <image src='http://www.zhaoxiaoqiang.com/images/seafood/webdd.jpg' mode="widthFix"></image>
 <!-- </navigator> -->
@@ -62,13 +63,13 @@
        </view>
 
        <view class="buts">
-         <navigator url="/pages/index/index" pen-type="redirect" >
+         <navigator url="/pages/indexs/indexs" pen-type="redirect" >
         <view class="itembuts active">继续兑换</view>
       </navigator>
       
-<navigator url="/pages/webview/webview" pen-type="redirect" >
-       <view class="itembuts">继续选购</view>
-  </navigator>
+<!-- <navigator url="/pages/webview/webview" pen-type="redirect" > -->
+       <view class="itembuts" bindtap="toyouzan">继续选购</view>
+  <!-- </navigator> -->
        </view>
        </view>
     </view>
@@ -77,7 +78,7 @@
 <view class="timeshadowbox" wx:if="{{istime}}">
   <view class="timeshadow" bindtap='rmistime'></view>
   <view class="timedata">
-   <calendar start-date="{{startdate}}" weeks-type="cn" end-date="{{enddate}}" days-color="{{daysclor}}" binddayClick="dayClick" bindnextMonth="next" bindprevMonth="prev" calendar-style="calendar" board-style="board" />
+   <calendar start-date="{{startdate}}" weeks-type="cn" end-date="{{enddate}}" days-color="{{daysclor}}" binddayClick="dayClick" bindnextMonth="next" bindprevMonth="prev" calendar-style="calendar" board-style="board"  header-style="header"/>
   </view>
 </view>
 

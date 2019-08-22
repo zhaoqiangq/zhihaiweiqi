@@ -13,7 +13,7 @@
     <navigator url="/pages/index/index" pen-type="navigate" >
         <view>
             <image src='../../img/icon01.png' mode='widthFix'></image>
-            <text>礼品兑换中心</text>
+            <text>兑换中心</text>
         </view>
     </navigator>
     </view>
@@ -21,7 +21,7 @@
     <!-- <navigator url="/pages/webview/webview" pen-type="navigate" > -->
         <view>
           <image src='../../img/icon02.png' mode='widthFix'></image>
-          <text>有赞商城</text>
+          <text>海鲜商城</text>
         </view>
     <!-- </navigator> -->
      </view>
@@ -29,7 +29,7 @@
         <navigator url="/pages/webview/webview" pen-type="navigate" >
         <view>
           <image src='../../img/icon03.png' mode='widthFix'></image>
-          <text>电子馈赠礼包</text>
+          <text>电子礼包</text>
         </view>
     </navigator>
      </view>

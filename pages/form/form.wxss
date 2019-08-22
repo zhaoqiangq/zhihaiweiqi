@@ -208,4 +208,15 @@ page{
   border-radius: 16rpx;
   padding-top: 80rpx;
   padding-bottom: 50rpx;
+  font-size: 30rpx;
+}
+.board{
+   font-size: 32rpx;
+}
+.header{
+  font-size: 40rpx;
+  color: #ccc;
+}
+.calendar--cwj-icon {
+  font-size: 20px !important;
 }
